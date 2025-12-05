@@ -9,46 +9,31 @@ import agendaRoutes from "./src/routes/agendaRoutes.js";
 import authRoutes from "./src/routes/authRoutes.js";
 import { errorHandler } from "./src/middlewares/errorHandler.js";
 
-/* ============================================
-   1) Carregar variáveis de ambiente
-============================================ */
+// 1) Carregar variáveis de ambiente
 dotenv.config();
 
 console.log("### DEBUG JWT_SECRET =", JSON.stringify(process.env.JWT_SECRET));
-console.log("### TODAS AS VARIÁVEIS =", process.env);
 
+// 2) Conectar ao MongoDB (APENAS UMA VEZ)
 connectDB();
 
-
-/* ============================================
-   2) Conectar ao MongoDB
-============================================ */
-connectDB();
-
-/* ============================================
-   3) Inicializar app
-============================================ */
 const app = express();
 app.use(express.json());
 
-/* ============================================
-   4) Segurança — CORS + Helmet
-============================================ */
+// ROTA DE TESTE DAS VARIÁVEIS
+app.get("/test-env", (req, res) => {
+  res.json({ JWT_SECRET: process.env.JWT_SECRET });
+});
 
-// Libera qualquer origem (para funcionar no Render)
-app.use(
-  cors({
-    origin: "*"
-  })
-);
-
-// Proteções HTTP
+// CORS + Helmet
+app.use(cors({ origin: "*" }));
 app.use(helmet());
 
-/* ============================================
-   5) Rotas públicas
-============================================ */
+// 4) Segurança — CORS + Helmet
+app.use(cors({ origin: "*" }));
+app.use(helmet());
 
+// 5) Rotas públicas
 app.get("/health", (req, res) => {
   res.json({ status: "ok", timestamp: new Date() });
 });
@@ -64,28 +49,19 @@ app.get("/status", (req, res) => {
 // Login e Registro
 app.use("/api/auth", authRoutes);
 
-/* ============================================
-   6) Rotas protegidas (JWT)
-============================================ */
+// Rotas protegidas
 app.use("/api/agenda", agendaRoutes);
 
-/* ============================================
-   7) Rota principal
-============================================ */
+// Página inicial
 app.get("/", (req, res) => {
   res.send("API Calendário/Barbearia rodando!");
 });
 
-/* ============================================
-   8) Middleware Global de Erros
-============================================ */
+// Middleware Global de Erros
 app.use(errorHandler);
 
-/* ============================================
-   9) Iniciar Servidor
-============================================ */
+// 9) Iniciar Servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   logger.info(`Servidor rodando na porta ${PORT}`);
-  console.log(`Servidor rodando na porta ${PORT}`);
 });

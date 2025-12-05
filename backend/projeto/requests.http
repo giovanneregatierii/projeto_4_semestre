@@ -1,0 +1,95 @@
+### 🧪 Testar Healthcheck
+GET http://localhost:3000/health
+
+### 🧪 Testar Status da API
+GET http://localhost:3000/status
+### Registro
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "nome": "Teste Usuário",
+  "email": "teste@example.com",
+  "senha": "123456"
+}
+
+
+
+##########################################################
+#  🔐 AUTENTICAÇÃO
+##########################################################
+
+### 📌 Registrar Usuário
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "nome": "Caroline Marques",
+  "email": "caroline@example.com",
+  "senha": "123456"
+}
+
+
+### 📌 Login do Usuário
+# Resposta retorna um TOKEN — copie e cole abaixo!
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "caroline@example.com",
+  "senha": "123456"
+}
+
+
+### ⚠️ Cole o Token JWT aqui! 👇
+@token = PREENCHA_COM_SEU_TOKEN_AQUI
+
+
+##########################################################
+#  📅 AGENDA (PROTEGIDO COM JWT)
+##########################################################
+
+### Criar Agendamento
+POST http://localhost:3000/api/agenda
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "cliente_nome": "Caroline Marques",
+  "barbeiro_id": "João",
+  "data": "2025-12-05",
+  "hora_inicio": "18:00"
+}
+
+
+### Listar Agendamentos
+GET http://localhost:3000/api/agenda
+Authorization: Bearer {{token}}
+
+
+### Buscar Agendamento por ID
+GET http://localhost:3000/api/agenda/ID_DO_AGENDAMENTO
+Authorization: Bearer {{token}}
+
+
+### Atualizar Agendamento
+PUT http://localhost:3000/api/agenda/ID_DO_AGENDAMENTO
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "hora_inicio": "19:00"
+}
+
+
+### Excluir Agendamento
+DELETE http://localhost:3000/api/agenda/ID_DO_AGENDAMENTO
+Authorization: Bearer {{token}}
+
+
+##########################################################
+#  🔓 HORÁRIOS DISPONÍVEIS (ROTA PÚBLICA)
+##########################################################
+
+### Ver horários livres — 🆕
+GET http://localhost:3000/api/agenda/horarios?barbeiro_id=João&data=2025-12-05

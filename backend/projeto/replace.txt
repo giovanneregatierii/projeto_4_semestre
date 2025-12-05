@@ -1,0 +1,1 @@
+.env:MONGO_URI=mongodb+srv://giovanne_regatieri:<Ku9MVbCHBQgkTtMZ>@cluster0.rbc4fuz.mongodb.net/?appName=Cluster0

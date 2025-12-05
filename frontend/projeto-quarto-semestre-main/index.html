@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lindões do Cortes - Barbearia Premium</title>
+    <meta name="description" content="A barbearia premium que transforma seu visual com técnicas modernas e atendimento personalizado. Agende seu horário online!">
+    <meta name="keywords" content="barbearia, corte de cabelo, barba, São Paulo, premium, agendamento online">
+    
+    <meta property="og:title" content="Lindões do Cortes - Barbearia Premium">
+    <meta property="og:description" content="A barbearia premium que transforma seu visual com técnicas modernas e atendimento personalizado. Agende seu horário online!">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.462.0/lucide.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="img/icone da barbearia.png" class="logo-icon" alt="foto da barbearia">
+                        
+                    </div>
+                    <div class="logo-text">
+                        <h1>Lindões do Cortes</h1>
+                        <p>Barbearia Premium</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="#home">Início</a>
+                    <a href="#services">Serviços</a>
+                    <a href="#booking">Agendamento</a>
+                    <a href="#contact">Contato</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="cta-desktop">
+                    <a href="#booking" class="btn btn-hero">Agendar Agora</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i data-lucide="menu" id="menu-icon"></i>
+                    <i data-lucide="x" id="close-icon" style="display: none;"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobile-menu">
+                <nav class="nav-mobile">
+                    <a href="#home">Início</a>
+                    <a href="#services">Serviços</a>
+                    <a href="#booking">Agendamento</a>
+                    <a href="#contact">Contato</a>
+                    <a href="#booking" class="btn btn-hero">Agendar Agora</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Transforme seu visual com os
+                        <span class="text-gradient">Lindões do Cortes</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        A barbearia premium que combina técnicas tradicionais com um toque moderno.
+                        Experimente um atendimento personalizado que realça sua personalidade única.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#booking" class="btn btn-hero btn-lg">
+                            <i data-lucide="calendar"></i>
+                            Agendar Horário
+                        </a>
+                        <button class="btn btn-outline btn-lg">
+                            <i data-lucide="phone"></i>
+                            (11) 94822-5158
+                        </button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Clientes Satisfeitos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Anos de Experiência</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="img/Barbearia.jfif" alt="Foto do salão Lindões do Cortes">
+                </div>
+            </div>
+
+
+            
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Serviços Premium</h2>
+                <p>Oferecemos uma gama completa de serviços para cuidar da sua aparência com excelência</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="./img/Corte-masculino.jpg" alt="Corte de Cabelo Masculino">
+                    </div>
+                    <div class="service-content">
+                        <h3>Corte Masculino</h3>
+                        <p>Cortes modernos e clássicos executados com precisão e técnica apurada</p>
+                        <div class="service-price">R$ 45</div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="./img/Bigode-barba.jpg" alt="Barba e Bigode">
+                    </div>
+                    <div class="service-content">
+                        <h3>Barba & Bigode</h3>
+                        <p>Design e aparação de barba com acabamento perfeito e produtos premium</p>
+                        <div class="service-price">R$ 35</div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="./img/Progressiva.jfif" alt="Combo Completo">
+                    </div>
+                    <div class="service-content">
+                        <h3>Combo Completo</h3>
+                        <p>Corte + barba + finalização com produtos de alta qualidade</p>
+                        <div class="service-price">R$ 70</div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="./img/Relaxamento.jfif" alt="Tratamento Capilar">
+                    </div>
+                    <div class="service-content">
+                        <h3>Tratamento Capilar</h3>
+                        <p>Hidratação e cuidados especiais para manter seus cabelos saudáveis</p>
+                        <div class="service-price">R$ 25</div> 
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="./img/Luzes.jfif" alt="Luzes masculinas">
+                    </div>
+                    <div class="service-content">
+                        <h3>Luzes Masculinas</h3>
+                        <p>Luzes masculinas modernas e clássicas executados com precisão e técnica apurada</p>
+                        <div class="service-price">R$ 60</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <div class="booking-content">
+                <div class="booking-info">
+                    <h2>Agende seu horário</h2>
+                    <p>Reserve seu momento de cuidado pessoal conosco. Preencha o formulário e entraremos em contato para confirmar.</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>Rua Vicente José Cabral 28 - São Paulo, SP</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>(11) 94822-5158</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="clock"></i>
+                            <span>Seg-Sex: 9h às 19h | Sáb: 8h às 17h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="booking-form" id="booking-form">
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                         <label for="email">E-mail</label>
+                         <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Serviço</label>
+                        <select id="service" name="service" required>
+                            <option value="">Selecione um serviço</option>
+                            <option value="corte">Corte Masculino - R$ 45</option>
+                            <option value="barba">Barba & Bigode - R$ 35</option>
+                            <option value="combo">Combo Completo - R$ 70</option>
+                            <option value="tratamento">Tratamento Capilar - R$ 25</option>
+                            <option value="tratamento">Luzes Masculinas - R$ 60</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Data Preferida</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Horário Preferido</label>
+                            <select id="time" name="time" required>
+                                <option value="">Selecione</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-hero btn-lg btn-full">
+                        <i data-lucide="calendar-check"></i>
+                        Confirmar Agendamento
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i data-lucide="scissors"></i>
+                        </div>
+                        <div>
+                            <h3>Lindões do Cortes</h3>
+                            <p>Barbearia Premium</p>
+                        </div>
+                    </div>
+                    <p>Transformando visuais com excelência e dedicação há mais de 5 anos.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-item">
+                        <i data-lucide="map-pin"></i>
+                        <span>Rua Vicente José Cabral 28<br>São Paulo, SP </span>
+                    </div>
+                    <div class="contact-item">
+                        <i data-lucide="phone"></i>
+                        <span>(11) 94822-5158</span>
+                    </div>
+                    <div class="contact-item">
+                        <i data-lucide="mail"></i>
+                        <span>contato@lindoesdocortes.com</span>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Horários</h4>
+                    <div class="schedule">
+                        <div class="schedule-item">
+                            <span>Segunda - Sexta</span>
+                            <span>9h às 19h</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span>Sábado</span>
+                            <span>8h às 17h</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span>Domingo</span>
+                            <span>Fechado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/lindao_dos_cortes?igsh=MTByaWRwaXQ4dWt2&utm_source=qr" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="https://wa.me/5511948225158" aria-label="WhatsApp">
+                            <i data-lucide="message-circle"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@seuusuario" target="_blank" aria-label="TikTok">
+                           <i data-lucide="play-circle"></i>
+                       </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lindões do Cortes. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
